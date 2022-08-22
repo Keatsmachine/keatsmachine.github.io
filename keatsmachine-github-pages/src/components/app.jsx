@@ -5,30 +5,19 @@ import Navigation from "./Navigation";
 import Heading from "./Heading";
 import Body from "./Body";
 import Footer from "./Footer";
+import Avatar from "@mui/material/Avatar";
 
 const year = new Date().getFullYear();
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <Navigation />
-        <Heading />
-        <Body />
-        <Footer />
-        {/* <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
-        <p>
-          Copyright {year}
-        </p>
-      </header>
+      <Navigation heading="Test" />
+      <Heading />
+      <Avatar alt="Remy Sharp" src={logo} style={{"margin":"auto"}}/>
+      <Body />
+      <Footer />
+      <p>Copyright {year}</p>
     </div>
   );
 }

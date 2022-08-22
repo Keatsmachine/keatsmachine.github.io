@@ -1,9 +1,10 @@
 import React from "react";
-import '../styles/App.css';
+//import '../styles/App.css';
+
 
 function Heading() {
   return (
-    <p>Here is some heading content todo</p>
+    <h1>Here is a heading</h1>
   );
 }
 

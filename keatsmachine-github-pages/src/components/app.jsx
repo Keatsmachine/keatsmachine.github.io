@@ -1,11 +1,9 @@
 import React, {useState} from "react";
 import '../styles/App.css';
-import logo from '../styles/logo.svg';
 import Navigation from "./Navigation";
-import Heading from "./Heading";
-import Body from "./Body";
 import Footer from "./Footer";
-import Avatar from "@mui/material/Avatar";
+import Home from "../pages/Home";
+import TravelersParadox from "../pages/TravelersParadox";
 
 const year = new Date().getFullYear();
 const pages = ["Home", "Travelers Paradox"]; // TODO: Move to json file and add extra content etc
@@ -24,9 +22,8 @@ function App() {
         heading={currentPage}
         onPagePicked={onPagePicked}
       />
-      <Heading title={currentPage}/>
-      <Avatar alt="Remy Sharp" src={logo} style={{ margin: "auto" }} />
-      <Body />
+      {currentPage === "Home" ? <Home /> : null}
+      {currentPage === "Travelers Paradox" ? <TravelersParadox /> : null}
       <Footer />
       <p>Copyright {year}</p>
     </div>

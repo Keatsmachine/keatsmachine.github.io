@@ -15,7 +15,9 @@ export default function BasicMenu(props) {
     };
     const handleClose = (index) => {
         setAnchorEl(null);
-        props.onPagePicked(index);
+        if (!isNaN(index)) {
+            props.onPagePicked(index);
+        }
     };
 
   return (

@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import '../styles/App.css';
+import background from "../styles/diagmonds-light.png";
 import Navigation from "./Navigation";
 import Footer from "./Footer";
 import Home from "../pages/Home";
@@ -16,7 +17,12 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div
+      className="App"
+      style={{
+        backgroundImage: `url(${background})`,
+      }}
+    >
       <Navigation
         pages={pages}
         heading={currentPage}

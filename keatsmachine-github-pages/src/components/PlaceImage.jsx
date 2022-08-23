@@ -6,9 +6,10 @@ function PlaceImage (props) {
     return (
       <img
         style={{
-            height: null,
-            flex: 1,
-            width: '100%'
+          height: null,
+          flex: 1,
+          width: "100%",
+          maxWidth: "1000px",
         }}
         src={`http://placekitten.com/${width}/${height}`}
         alt={`placeholder ${width} by ${height}`}

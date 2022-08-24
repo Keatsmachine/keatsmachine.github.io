@@ -20,7 +20,7 @@ function App() {
     <div
       className="App"
       style={{
-        backgroundImage: `url(${background})`,
+        backgroundImage: `url(${background})`
       }}
     >
       <Navigation
@@ -31,7 +31,10 @@ function App() {
       {currentPage === "Home" ? <Home /> : null}
       {currentPage === "Travelers Paradox" ? <TravelersParadox /> : null}
       <Footer />
-      <p>Copyright {year}</p>
+      <p style={{
+        margin: "0px",
+        paddingBottom: "20px"
+      }}>Copyright {year}</p>
     </div>
   );
 }

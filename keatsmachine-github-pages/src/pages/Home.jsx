@@ -4,10 +4,11 @@ import portrait from "../styles/Portrait_Darren.jpeg";
 import Heading from "../components/Heading";
 import Body from "../components/Body";
 import Avatar from "@mui/material/Avatar";
+import PageContainer from "../components/PageContainer";
 
 function Home () {
     return (
-      <div>
+      <PageContainer>
         <Avatar
           alt="Unflattering self portrait of Darren"
           src={portrait}
@@ -15,7 +16,7 @@ function Home () {
         />
         <Heading title="Home" />
         <Body />
-      </div>
+      </PageContainer>
     );
 }
 

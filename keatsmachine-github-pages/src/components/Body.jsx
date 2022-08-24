@@ -3,7 +3,9 @@ import '../styles/App.css';
 
 function Body() {
   return (
-    <div>
+    <div style={{
+      margin: "10px"
+    }}>
         <p>Here is some body content. 
           
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vestibulum semper felis, eget mollis lectus commodo id. Quisque ut venenatis orci. Sed non sapien maximus, molestie mauris et, accumsan mauris. Quisque fermentum pretium magna, sit amet luctus ligula volutpat quis. Phasellus in tempus odio, ut aliquam erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam ante ipsum, bibendum non enim ac, tristique sodales magna. Cras eu eleifend odio. Ut rutrum eu orci in ultricies. Pellentesque luctus quis turpis ut rhoncus. Aenean sollicitudin erat in luctus sollicitudin. Fusce posuere commodo dapibus. Suspendisse posuere scelerisque elit, id porta ante dapibus ut. Sed bibendum feugiat ex sed dignissim. Vivamus mauris nisl, eleifend eget neque quis, venenatis consectetur odio.

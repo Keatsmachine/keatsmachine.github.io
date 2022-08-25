@@ -3,7 +3,7 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
-import { PropaneSharp } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 
 export default function BasicMenu(props) {
     const pages = props.pages;
@@ -46,7 +46,18 @@ export default function BasicMenu(props) {
         }}
       >
         {pages.map((page, index) => (
-          <MenuItem key={index} id={index} onClick={() => {handleClose(index)}}>{page}</MenuItem>
+          <MenuItem
+            key={index}
+            id={index}
+            onClick={() => {
+              handleClose(index);
+            }}
+          >
+            <Link style={{
+              color: "black",
+              textDecoration: "none"
+            }} to={"/" + page}>{page}</Link>
+          </MenuItem>
         ))}
       </Menu>
     </div>

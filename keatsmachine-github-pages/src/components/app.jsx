@@ -5,9 +5,10 @@ import Navigation from "./Navigation";
 import Footer from "./Footer";
 import Home from "../pages/Home";
 import TravelersParadox from "../pages/TravelersParadox";
+import { Outlet, Link } from "react-router-dom";
 
 const year = new Date().getFullYear();
-const pages = ["Home", "Travelers Paradox"]; // TODO: Move to json file and add extra content etc
+const pages = ["Home", "Travelers Paradox"];
 
 function App() {
   const [currentPage, setCurrentPage] = useState(pages[0]);
@@ -21,7 +22,7 @@ function App() {
       className="App"
       style={{
         backgroundImage: `url(${background})`,
-        backgroundColor: "whitesmoke"
+        backgroundColor: "whitesmoke",
       }}
     >
       <Navigation
@@ -29,13 +30,16 @@ function App() {
         heading={currentPage}
         onPagePicked={onPagePicked}
       />
-      {currentPage === "Home" ? <Home /> : null}
-      {currentPage === "Travelers Paradox" ? <TravelersParadox /> : null}
+      <Outlet />{/* All pages will be rendered here */}
       <Footer />
-      <p style={{
-        margin: "0px",
-        paddingBottom: "20px"
-      }}>Copyright {year}</p>
+      <p
+        style={{
+          margin: "0px",
+          paddingBottom: "20px",
+        }}
+      >
+        Copyright {year}
+      </p>
     </div>
   );
 }

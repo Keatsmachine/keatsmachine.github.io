@@ -20,7 +20,8 @@ function App() {
     <div
       className="App"
       style={{
-        backgroundImage: `url(${background})`
+        backgroundImage: `url(${background})`,
+        backgroundColor: "whitesmoke"
       }}
     >
       <Navigation

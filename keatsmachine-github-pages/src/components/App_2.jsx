@@ -16,7 +16,7 @@ function App() {
     >
       <Navigation/>
       <ScrollToTop/>
-      <Outlet />{/* All pages will be rendered here */}
+      <Outlet />{/* All pages will be rendered */}
       <Footer />
     </div>
   );

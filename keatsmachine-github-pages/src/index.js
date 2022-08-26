@@ -13,18 +13,14 @@ root.render(
     <Routes>
       <Route path="/" element={<App />}>
         <Route path="Home" element={<Home />} />
-        <Route path="Travelers%20Paradox" element={<TravelersParadox />} />
+        <Route path="TravelersParadox" element={<TravelersParadox />} />
         <Route
-          path="Travelers%20Paradoxs%20Privacy%20Policy"
+          path="TP_Privacy"
           element={<TravelersParadoxPrivacy />}
         />
         <Route path="*" element={<p>There is nothing here</p>} />
+        <Route path="" element={<Home />} />
       </Route>
     </Routes>
   </BrowserRouter>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-//reportWebVitals();

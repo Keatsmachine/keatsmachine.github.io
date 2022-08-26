@@ -3,7 +3,6 @@ import "../styles/App.css";
 import traverlersParadoxHero from "../styles/TravelersParadoxTitle.PNG";
 import Heading from "../components/Heading";
 import Body from "../components/Body";
-import PlaceImage from "../components/PlaceImage";
 import PageContainer from "../components/PageContainer";
 import HeroImage from "../components/HeroImage";
 import { Link } from "react-router-dom";
@@ -17,7 +16,7 @@ function TravelersParadox() {
       />
       <Heading title="Travelers Paradox" />
       <Body />
-      <Link to={"/Travelers%20Paradoxs%20Privacy%20Policy"}>
+      <Link to={"/TP_Privacy"}>
         Privacy Policy
       </Link>
     </PageContainer>

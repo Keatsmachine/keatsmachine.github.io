@@ -4,20 +4,18 @@ import MenuItem from "@mui/material/MenuItem";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-router-dom";
+import validRoutes from "../contexts/ValidRoutes.js"
 
-export default function BasicMenu(props) {
-    const pages = props.pages;
+export default function BasicMenu() {
+    const pages = validRoutes.filter((route) => { return route.showInMenu });
 
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
     };
-    const handleClose = (index) => {
+    const handleClose = () => {
         setAnchorEl(null);
-        if (!isNaN(index)) {
-            props.onPagePicked(index);
-        }
     };
 
   return (
@@ -56,7 +54,7 @@ export default function BasicMenu(props) {
             <Link style={{
               color: "black",
               textDecoration: "none"
-            }} to={"/" + page}>{page}</Link>
+            }} to={"/" + page.url}>{page.title}</Link>
           </MenuItem>
         ))}
       </Menu>

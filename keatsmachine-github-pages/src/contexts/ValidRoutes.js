@@ -2,12 +2,12 @@ const validTitles = [
   {
     url: "Home",
     title: "Home",
-    showInMenu: true,
+    showInMenu: false,
   },
   {
     url: "About",
     title: "About Me",
-    showInMenu: false,
+    showInMenu: true,
   },
   {
     url: "TravelersParadox",

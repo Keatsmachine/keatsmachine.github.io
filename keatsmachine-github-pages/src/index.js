@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import App from "./components/app";
+import App from "./components/App";
 
 import Home from "./pages/Home";
 import TravelersParadox from "./pages/TravelersParadox";

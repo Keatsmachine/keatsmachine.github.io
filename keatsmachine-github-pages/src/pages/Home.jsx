@@ -5,6 +5,8 @@ import Heading from "../components/Heading";
 import Body from "../components/Body";
 import Avatar from "@mui/material/Avatar";
 import PageContainer from "../components/PageContainer";
+import LinkStyled from "../components/LinkStyled";
+import validRoutes from "../contexts/ValidRoutes.js"
 
 function Home () {
     return (
@@ -15,7 +17,23 @@ function Home () {
           sx={{ width: 200, height: 200, margin: "auto", marginTop: "20px" }}
         />
         <Heading title="Home" />
-        <Body />
+        <Body
+          data={[
+            {
+              body: "Hello there",
+            },
+          ]}
+        />
+        {validRoutes.filter((route)=>{return route.showInMenu}).map((route) => {
+          return (
+            <div>
+              <LinkStyled to={"/" + route.url}>{route.title}</LinkStyled>
+            </div>
+          );
+        })}
+        <div style={{
+          marginBottom:'16px'
+        }}/>
       </PageContainer>
     );
 }

@@ -5,7 +5,7 @@ import Heading from "../components/Heading";
 import Body from "../components/Body";
 import PageContainer from "../components/PageContainer";
 import HeroImage from "../components/HeroImage";
-import { Link } from "react-router-dom";
+import LinkStyled from "../components/LinkStyled";
 import travelersParadoxModel from "./TavelersParadoxModel";
 
 function TravelersParadox() {
@@ -16,10 +16,13 @@ function TravelersParadox() {
         imageAlt={"Travelers Paradox Title"}
       />
       <Heading title="Travelers Paradox" />
-      <Body data={travelersParadoxModel}/>
-      <Link to={"/TP_Privacy"}>
-        Privacy Policy
-      </Link>
+      <Body data={travelersParadoxModel} />
+      <LinkStyled to={"/TP_Privacy"}>Privacy Policy</LinkStyled>
+      <div
+        style={{
+          marginBottom: "16px",
+        }}
+      />
     </PageContainer>
   );
 }

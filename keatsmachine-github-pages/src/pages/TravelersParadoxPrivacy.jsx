@@ -14,7 +14,12 @@ function TravelersParadox() {
         This game was made using the unity engine. The privacy policy can be
         found <a href="https://unity.com/legal/privacy-policy">here</a>
       </p>
-      <Body data={travelersParadoxPrivacyModel} />
+      <Body
+        data={travelersParadoxPrivacyModel}
+        style={{
+          marginBottom: "16px",
+        }}
+      />
     </PageContainer>
   );
 }

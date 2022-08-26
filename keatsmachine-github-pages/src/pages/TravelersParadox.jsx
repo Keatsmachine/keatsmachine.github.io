@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/App.css";
-import traverlersParadoxHero from "../styles/TravelersParadoxTitle.PNG";
+import traverlersParadoxHero from "../styles/TP_Hero2.PNG";
 import Heading from "../components/Heading";
 import Body from "../components/Body";
 import PageContainer from "../components/PageContainer";

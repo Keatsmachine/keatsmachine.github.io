@@ -50,10 +50,15 @@ export default function BasicMenu() {
             onClick={() => {
               handleClose(index);
             }}
+            sx={{
+              padding: "0px"
+            }}
           >
             <Link style={{
               color: "black",
-              textDecoration: "none"
+              textDecoration: "none",
+              flex: "auto",
+              padding: "5px"
             }} to={"/" + page.url}>{page.title}</Link>
           </MenuItem>
         ))}

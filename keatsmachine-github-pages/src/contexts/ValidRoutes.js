@@ -2,7 +2,7 @@ const validTitles = [
   {
     url: "Home",
     title: "Home",
-    showInMenu: true,
+    showInMenu: false,
   },
   {
     url: "About",
